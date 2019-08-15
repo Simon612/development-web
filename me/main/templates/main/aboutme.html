@@ -1,0 +1,33 @@
+{% extends 'main/sidebar.html' %}
+{% load static %}
+
+{% block title %}
+{% endblock %}
+{% block content %}
+<div class="card text-white bg-warning mb-3" style="max-width: 150rem; height: 350px;">
+  <div class="card-header" style="max-width: 150rem; height: 80px;"><h1 style="position: absolute; right: 1400px;">Something about me</h1></div>
+  <div class="card-body">
+    <h2 style="position: absolute; right: 820px; top: 90px; font-size: 300%;">Web development</h2>
+    <h2 style="position: absolute; right: 800px; top: 150px; font-size: 300%;">Django programing</h2>
+
+    <img  src="{% static 'main/images/img1.png' %}" style="position:absolute; top: 100px; right: 1350px">
+    <img src="{% static 'main/images/dj.png' %}" style="position:absolute; top: 40px; right: 290px">
+  </div>
+</div>
+
+<div class="card text-white bg-primary mb-3" style="max-width: 20rem; height: 350px; position: absolute; top: 460px; left: 550px;">
+  <div class="card-header">About me</div>
+  <div class="card-body">
+    <p class="card-text" style="font-size; 200:">{{text1}}</p>
+  </div>
+</div>
+
+<div class="card text-white bg-primary mb-3" style="max-width: 20rem; height: 350px; position: absolute; top: 460px; left: 970px;">
+  <div class="card-header">About me</div>
+  <div class="card-body">
+    <p class="card-text" style="font-size; 200:">{{text2}}</p>
+  </div>
+</div>
+<p style="position: absolute; top: 850px; right: 700px; font-size: 200%;">
+    If you want sign up for my services click <a href="/signed">here</a></p>
+{% endblock %}

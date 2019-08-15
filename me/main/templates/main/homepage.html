@@ -1,0 +1,38 @@
+{% extends 'main/sidebar.html' %}
+{% load static %}
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<div class="card text-white bg-warning mb-3" style="max-width: 150rem; height: 350px;">
+  <div class="card-header" style="max-width: 150rem; height: 80px;"><h1 style="position: absolute; right: 1550px;">Home Page</h1></div>
+  <div class="card-body">
+    <h2 style="position: absolute; right: 820px; top: 90px; font-size: 300%;">Web development</h2>
+    <h2 style="position: absolute; right: 800px; top: 150px; font-size: 300%;">Django programing</h2>
+
+    <img  src="{% static 'main/images/img1.png' %}" style="position:absolute; top: 100px; right: 1350px">
+    <img src="{% static 'main/images/dj.png' %}" style="position:absolute; top: 40px; right: 290px">
+  </div>
+</div>
+
+<h3 style="position: absolute; right: 540px; top: 450px; width: 900px; font-size: 25px; text-align: center;">{{ maintext }}</h3>
+<h3 style="position: absolute; right: 1090px; top: 550px; font-size: 30px; text-decoration: underline;">Sign Up here</h3>
+<h5 style="position: absolute; right: 1170px; top: 600px;">|</h5>
+<h5 style="position: absolute; right: 1170px; top: 610px;">|</h5>
+<h5 style="position: absolute; right: 1166.5px; top: 618px;">V</h5>
+
+<form method="post" action="signed/" style="position: absolute; top: 650px; right: 1130px; font-size: 200%;">
+    {% csrf_token %}
+    <button class="btn btn-outline-primary btn-lg" type="submit" name="Sign" value="signup" >SignUp</button>
+</form>
+
+<h3 style="position: absolute; right: 750px; top: 550px; font-size: 30px; text-decoration: underline;">Read about me</h3>
+<h5 style="position: absolute; right: 850px; top: 600px;">|</h5>
+<h5 style="position: absolute; right: 850px; top: 610px;">|</h5>
+<h5 style="position: absolute; right: 846.5px; top: 618px;">V</h5>
+
+<form method="post" action="aboutme/" style="position: absolute; top: 650px; right: 810px; font-size: 200%;">
+    {% csrf_token %}
+    <button class="btn btn-outline-primary btn-lg" type="submit" name="Read" value="Read">Read</button>
+</form>
+{% endblock %}

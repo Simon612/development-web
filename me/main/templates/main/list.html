@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>List of people</title>
+</head>
+
+<body>
+<h1>{{list}}</h1>
+<form method="post" action="#">
+    {% csrf_token %}
+    <ul>
+        {% for emails in ls.emails_set.all %}
+            {% if complete == True %}
+                <li><input type="checkbox" value="clicked" name="c[[emails.id}}" checked>{{emails.txt}}</li>
+            {% else %}
+                <li><input type="checkbox" value="clicked" name="c[[emails.id}}">{{emails.txt}}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <button type="submit" name="update" value="update">Update</button>
+</form>
+</body>
